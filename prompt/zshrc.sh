@@ -4,9 +4,7 @@
 autoload -Uz colors
 colors
 
-#PROMPT=$'%{\e[30;48;5;082m%}%{\e[38;5;001m%}[%n@%m]%{\e[0m%}'
-
-PROMPT='[%m💻@%n ${F[magenta]}%D{%m/%d} $f%D{%H:%M}]$vcs_info_msg_0_
+PROMPT='[%m💻@%n ${F[magenta]}%D{%m/%d}$f %D{%H:%M}]$vcs_info_msg_0_
 %c %# '
 
 # git
