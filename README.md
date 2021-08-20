@@ -21,3 +21,4 @@ fileを開き、applicationとして起動する
 簡単なコマンドチュートリアルを行う  
 statusbar？の箇所にアイコンが出ており、statusが確認できる  
 ```running```
+
