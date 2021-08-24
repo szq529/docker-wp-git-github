@@ -22,3 +22,23 @@ fileを開き、applicationとして起動する
 statusbar？の箇所にアイコンが出ており、statusが確認できる  
 ```running```
 
+```docker images```
+install済みのimageを一覧で確認
+
+|ヘッダー|概要| 
+|:-|:-|
+|REPOSITORY|どのリポジトリからダウンロードしたものか|
+|TAG|どのタグを取得したか|
+|IMAGE ID|イメージを識別するためのID|
+|CREATED|いつ作成されたイメージか|
+|SIZE|イメージのサイズ|
+
+
+
+
+
+```
+docker pull nginx
+```
+コマンドでnginxのcontainerをpullする
+
