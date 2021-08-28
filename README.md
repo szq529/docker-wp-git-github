@@ -121,3 +121,5 @@ docker container rm <container名>
 docker pull nginx
 ```
 コマンドでnginxのcontainerをpullする
+
+git test
