@@ -115,6 +115,8 @@ docker container stop <container名>
 docker container rm <container名>
 ```
 
+## 公式のリポジトリからcontainerをpullしてみる
+
 ```
 docker pull nginx
 ```
