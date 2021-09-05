@@ -122,4 +122,4 @@ docker pull nginx
 ```
 コマンドでnginxのcontainerをpullする
 
-test edit
+git test
