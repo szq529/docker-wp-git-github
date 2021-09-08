@@ -1,0 +1,15 @@
+version: '3'
+services  :
+  web:
+    build: .    #ymlファイルと同じディレクトリのDockerfileを使うのて用意しておく
+    ports:
+    - "5000:5000"  #コンテナ外部に公開するポート番号：マッピング先のポート
+    volimes:    #bindマウント
+    - .:/code    #ymlファイルがあるディレクトリをコンテナのディレクトリにマウント
+    - logvolume01:/var/log  #下に定義したlogvolumes01のボリュームをwebサービスのディレクトリにマウント
+    links:
+    - redis
+  readis:
+    image:redis
+volumes:
+  logvolume: {}  #名前つけたボリュームを使用する場合は定義しておく
