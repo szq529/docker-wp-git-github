@@ -1,6 +1,3 @@
-FROM ruby:2.7
+FROM nginx:latest
+COPY default.conf /etc/nginx/conf.d/default.conf
 
-RUN mkdir /var/www
-COPY main.rb /var/www
-
-CMD ["ruby", "/var/www/main.rb"]
