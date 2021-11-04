@@ -1,3 +1,5 @@
+<!-- ver5.2からできたtag
+html出力直後に出力したいものがある際に使えるもの -->
 <?php wp_body_open(); ?>
 
 <!-- Navigation -->

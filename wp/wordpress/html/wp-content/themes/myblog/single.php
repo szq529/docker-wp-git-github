@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!-- lange ="en" -->
+<!-- templateタグでwpの設定言語に合わせて出力される -->
 <html <?php language_attributes(); ?>>
 
 <head>
@@ -7,9 +9,11 @@
 
 </head>
 
-<body <?php body_class(); ?>>
+<!-- たくさんのbodytagが付加される
+class属性を使ってjavascriptの稼働を制御したりする
+wpの今の状況がどのようなものから推測することができる -->
 
-<?
+<body <?php body_class(); ?>>
 
   <?php get_template_part('includes/header'); ?>
 
@@ -19,24 +23,11 @@
     <?php while (have_posts()) : the_post(); ?>
       <!-- Page Header -->
       <?php
-      // サムネイルがあれば
-      if (has_post_thumbnail()) :
-        // サムネイルのIDを返してもらって、取得
-        $id = get_post_thumbnail_id();
-        // IDを指定することによって今見ている投稿に指定されているアイキャッチを取り出せる
-        // 画像を使用する場合はそれに見合ったサイズを指定する
-        $img = wp_get_attachment_image_src($id, 'large');
-      else :
-        // なければデフォルトの画像を表示
-        $img = array(get_template_directory_uri() . '/img/post-bg.jpg');
-      endif;
+      // functions.phpで作成・追加した関数を使用
+      $eyecatch = get_eyecatch_with_default();
       ?>
-
-      <!-- <?php
-            $eyecatch = get_eyecatch_with_default();
-            ?> -->
       <!-- 画像パス[0]indexを指定し、出力 -->
-      <header class="masthead" style="background-image: url('<?php echo $img[0]; ?>')">
+      <header class="masthead" style="background-image: url('<?php echo $eyecatch[0]; ?>')">
         <div class="overlay"></div>
         <div class="container">
           <div class="row">
