@@ -1,0 +1,17 @@
+version: '3'
+services:
+  db: #データベースのサービスコンテナ作成
+    image: mysql:5.7 #mysqlコンテナ
+    environment: #環境変数
+      MYSQL_ROOT_PASSWORD: password #初期値のpasswd
+      MYSQL_DATABASE: mydb #初期値のデータベースの名前
+  web: #webという名前のコンテナ起動
+    build: . # .(カレントディレクトリ)にあるdockerfileからimegeをビルド
+    command: bundle exec rails s -p 3000 -b '0.0.0.0' # commandでコンテナ起動時に実行されるコマンド
+    volumes: #bindマウント
+      - .:/myapp
+    ports: # portsの番号はcommandに合わせる
+      - "3000:3000"
+    depends_on: # depends_noでwebサービスを起動する前にdbコンテナを実行するように依存関係の定義。これにより自動的にdbサービスが先に起動されるようになる
+      - db
+# dbとwebの２つのコンテナ起動する
