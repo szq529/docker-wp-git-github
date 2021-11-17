@@ -61,7 +61,7 @@
             <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
           </div>
         <?php else : ?>
-          <p>記事が見つかりませんでした</p>
+          <p>記事が見つかりませんでしたよ！</p>
         <?php endif; ?>
       </div>
       <!-- 分岐終了 -->
