@@ -2,4 +2,4 @@
 ../laravel
 ../ror
 ../vue
-/db
+wp/db/mysql
