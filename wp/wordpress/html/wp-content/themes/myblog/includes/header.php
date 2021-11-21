@@ -16,13 +16,13 @@ html出力直後に出力したいものがある際に使えるもの -->
           <a class="nav-link" href="index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="about.php">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="post.html">Sample Post</a>
+          <a class="nav-link" href="post.php">Sample Post</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-link" href="contact.php">Contact</a>
         </li>
       </ul>
     </div>
