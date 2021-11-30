@@ -12,7 +12,7 @@
   <!-- パーツを使用 -->
   <?php get_template_part('includes/header'); ?>
 
-
+  <!-- アーカイブではif構文を使って様々なタイトルを表示する -->
 
   <!-- Page Header -->
   <header class="masthead" style="background-image: url('img/home-bg.jpg')">
@@ -21,7 +21,19 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
-            <h1>category</h1>
+            <!-- tagのページを別のファイルで作成してもよいが、共通部分を作成した際に不便
+            同一のページで処理を分けて表示を変える -->
+            <?php if (is_category()) : ?>
+              <!-- カテゴリーアーカイブページならture,でなければfalse -->
+              <h1>Category</h1>
+              <!-- 作成者の審議 -->
+            <?php elseif (is_author()) : ?>
+              <h1>Author</h1>
+            <?php elseif (is_date()) : ?>
+              <h1>Date</h1>
+            <?php else : ?>
+              <h1>Tag</h1>
+            <?php endif; ?>
             <!-- テンプレートタグを使用して表示しているページのタイトルを表示するためのもの -->
             <span class="subheading"><?php wp_title(``); ?></span>
           </div>
