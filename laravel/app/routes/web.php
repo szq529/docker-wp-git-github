@@ -21,6 +21,8 @@ Route::get('/archives/', function () {
     return view('archives');
 });
 
-Route::get('/archives/dialy', function() {
+Route::get('/archives/dialy', function () {
     return 'dialyの一覧';
 });
+
+Route::get('/index', 'App\Http\Controllers\HelloController@index');
