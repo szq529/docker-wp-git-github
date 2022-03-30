@@ -1,3 +1,29 @@
+# cssのファイル作成・反映
+
+- cssファイルの場所
+  ```app/public/css/```内に```style.css```を作成
+
+```style.css
+@charset "utf-8";
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    color: #333;
+    font-size: 1.6rem;
+}
+```
+
+- 反映させるために
+    ```index.blade.php```内に記載
+
+```
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">  
+```
+
+
 # コントローラー作成
 
 CLI
@@ -64,3 +90,6 @@ Route::get('/index', 'App\Http\Controllers\HelloController@index');
     @endforeach
 @endsection
 ```
+
+参考:https://qiita.com/yukibe/items/7bab0d596ae9a0930f18
+
