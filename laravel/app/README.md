@@ -1,5 +1,13 @@
-# cssのファイル作成・反映
+# ログイン・ログアウト機能
 
+- 対象ファイル
+1. ```app/Providers/AppServiceProvider.php```
+2. ```resources/views/components/header.blade.php```
+
+- httpsの設定
+1. 
+
+# cssのファイル作成・反映
 - cssファイルの場所
   ```app/public/css/```内に```style.css```を作成
 
